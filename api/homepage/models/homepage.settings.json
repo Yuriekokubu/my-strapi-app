@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "homepage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "categories": {
+      "collection": "card"
+    }
+  }
+}

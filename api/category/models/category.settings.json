@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cards": {
+      "via": "category",
+      "collection": "card"
+    },
+    "ceatorInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "creator-info.creator-info"
+    }
+  }
+}

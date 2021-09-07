@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "name": "card",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 3,
+      "maxLength": 20
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "category": {
+      "via": "cards",
+      "model": "category"
+    },
+    "creatorInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "creator-info.creator-info"
+    }
+  }
+}
